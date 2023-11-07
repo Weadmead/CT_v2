@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
 }
 body {
     display: flex;
@@ -15,12 +16,13 @@ body {
 a {
     color: $text;
 }
-.chevron-down {
-    color: #fff;
-    fill: #fff;
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .main {
-    flex-grow: 1;
+    flex-grow: 1;   
 }
 .container-fluid {
     max-width: 1920px;
@@ -36,3 +38,4 @@ a {
     opacity: 0;
     visibility: hidden;
 }
+

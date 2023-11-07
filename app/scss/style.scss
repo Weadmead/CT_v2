@@ -7,6 +7,9 @@
 .header {
   border-bottom: 1px solid #06354d;
   background-color: #fff;
+  height: 150px;
+  position: sticky;
+  top: 0;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -38,9 +41,6 @@
     letter-spacing: 0.7px;
     @extend %roboto-500;
   }
-  &-contacts-link::after {
-    display: none;
-  }
   &-menu__item {
     & + .header-menu__item {
       margin-left: 18px;
@@ -62,18 +62,29 @@
     }
   }
   &-submenu__wrapper {
-    max-width: 920px;
-    width: 100%;
     padding: 25px 40px 10px 40px;
     position: absolute;
     background-color: #fff;
     left: -40px;
+    right: 0;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
     display: flex;
-    // justify-content: space-between;
+    border-radius: 6px;
     flex-wrap: wrap;
+    
+    
+  }
+  &-submenu__wrapper.header-submenu__wrapper--comunites {
+    justify-content: space-between;
+  }
+  &-submenu__wrapper--contacts {
+    padding: 65px 10px 0px 10px;
+    margin: 0;
+    left: auto;
+    right: -20px;
+    
   }
   &-submenu__wrapper.header__submenu--active {
     opacity: 1;
@@ -82,6 +93,33 @@
   &-submenu {
     margin-bottom: 20px;
     margin-right: 70px;
+    
+  }
+  &-submenu.header-submenu__contacts {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    align-items: center;
+    margin: 0;
+    
+    .header-submenu__item + .header-submenu__item {
+      margin-left: 15px;
+    }
+    .header-submenu__link {     
+      
+      img {
+        object-fit: cover;
+        width: 42px;
+        height: 42px;
+        align-self: center;
+        transition: all .2s;
+      }
+    }
+    .header-submenu__link:hover {
+      img {
+        transform: scale(1.2);        
+      }
+    }
   }
   &-submenu.header-submenu--comunites {
     .submenu-box {
@@ -89,8 +127,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       grid-auto-flow: column;
-      
-      
+      column-gap: 20px;
     }
   }
   &-submenu__title {
@@ -143,8 +180,7 @@
 }
 .text {
   width: 400px;
-  padding-left: 140px;
-  //   color: #8c8c8c;
+  padding-left: 140px;  
   color: $text;
 }
 
