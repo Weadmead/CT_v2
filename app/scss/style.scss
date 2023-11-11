@@ -178,6 +178,33 @@
     background-clip: text;
   }
 }
+
+.footer {
+  background-color: $bg;
+  color: #fff;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+  .privacy-policy {
+    color: #fff;
+    margin-left: 30px;
+    padding-left: 15px;
+    position: relative;
+    
+  }
+  .privacy-policy::before {
+    content: "| |";
+    left: -15px;
+    position: absolute;
+  }
+  .privacy-policy:hover {
+    text-decoration: underline;
+  }
+}
 .text {
   width: 400px;
   padding-left: 140px;  
