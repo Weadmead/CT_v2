@@ -1,17 +1,27 @@
 @media (max-width: 1560px) {
   body {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 13px;
+    line-height: 15px;
   }
   .header-decor {
     font-size: 15px;
-    line-height: 22px;
+    line-height: 20px;
     max-width: 300px;
     width: 100%;
     letter-spacing: 3px;
   }
   .header-logo__img {
-    width: 142px;
-    height: 112px;
+    width: 124px;
+    height: 96px;
   }
+  .hero-image {
+    height: 480px;
+  }
+  // .hero-content {
+  //   padding: 80px 60px;
+  // }
+  // .hero-content__title--decor {
+  //   max-width: 170px;
+  // }
+ 
 }
