@@ -31,7 +31,6 @@
   &-menu {
     position: relative;
     margin-right: 15px;
-    
   }
   &-menu__list {
     display: flex;
@@ -44,12 +43,10 @@
     @extend %roboto-500;
   }
   &-menu__item {
-   
     & + .header-menu__item {
       margin-left: 18px;
     }
     svg {
-      
       fill: $text;
     }
     &:hover {
@@ -82,10 +79,12 @@
     justify-content: space-between;
   }
   &-submenu__wrapper--contacts {
-    padding: 65px 10px 0px 10px;
+    padding: 5px 15px;
+
     margin: 0;
     left: auto;
     right: -20px;
+    top: 80px;
   }
   &-submenu__wrapper.header__submenu--active {
     opacity: 1;
@@ -95,30 +94,25 @@
     margin-bottom: 20px;
     margin-right: 70px;
   }
-  &-submenu.header-submenu__contacts {
+  &-submenu__contacts {
     display: flex;
     justify-content: center;
     flex-basis: 100%;
     align-items: center;
     margin: 0;
-
     .header-submenu__item + .header-submenu__item {
       margin-left: 15px;
     }
-    .header-submenu__link {
-      img {
-        object-fit: cover;
-        width: 42px;
-        height: 42px;
-        align-self: center;
-        transition: all 0.2s;
-      }
-    }
-    .header-submenu__link:hover {
-      img {
-        transform: scale(1.2);
-      }
-    }
+  }
+
+  &-submenu__link-image {
+    object-fit: cover;
+    width: 42px;
+    height: 42px;
+    transition: all 0.2s;
+  }
+  &-submenu__link-image:hover {
+    transform: scale(1.2);
   }
   &-submenu.header-submenu--comunites {
     .submenu-box {
@@ -206,6 +200,8 @@
 
 //main
 
+//start section hero
+
 .hero {
   position: relative;
   &-image {
@@ -238,8 +234,9 @@
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0 20px;
     margin: 20px 0;
+    height: 430px;
   }
   &-content__title-box {
     font-size: 56px;
@@ -248,30 +245,176 @@
     @extend %roboto-700;
     margin-right: 15px;
     text-shadow: 1px 1px 2px rgba(12, 84, 132, 1);
+
     .hero-content__title {
       font-size: inherit;
       padding-left: 35px;
+      margin-bottom: 25px;
     }
     span {
       color: $hover-accent;
     }
     &--decor {
       display: block;
-      max-width: 170px;
+      max-width: 120px;
+      padding: 10px 10px 10px 10px;
+      margin-left: 25px;
+      margin-bottom: 10px;
       background-color: rgba(108, 171, 204, 0.3);
       border-radius: 4px;
-      padding: 10px 35px 20px 35px;
     }
   }
+  &-content__btn {
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: 31px;
+    border-radius: 4px;
+    display: block;
+    max-width: 250px;
+    padding: 20px 35px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $bg;
+    transition: all 0.4s ease-in-out;
+  }
+  &-content__btn:hover {
+    background-color: $hover-accent;
+  }
+  &-content__tabs.tabs {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    .tabs__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: start;
+    }
 
+    .tabs__item:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    .tabs__btn {
+      padding: 6px 0px;
+      margin-bottom: 15px;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      @extend %roboto-500;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .tabs__btn:hover {
+      border-bottom: 3px solid #fff;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      transition: all 0.3s;
+    }
+
+    .tabs__btn--active {
+      border-bottom: 3px solid $hover-accent;
+      color: $hover-accent;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      pointer-events: none;
+    }
+
+    .tabs__content {
+      display: none;
+      background-color: rgba(108, 171, 204, 0.3);
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    .tabs__content--active {
+      display: block;
+    }
+
+    .tabs-content__box {
+      padding: 20px 30px;
+    }
+  }
   &-content__form {
-    background-color: rgba(108, 171, 204, 0.3);
-    width: 300px;
-    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .select__label {
+      overflow: hidden;
+      max-height: 80px;
+      transition: max-height 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .select__label.select-hide {
+      max-height: 0px;
+      visibility: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease-in-out, visibility 0s linear 0.3s,
+        opacity 0.3s linear;
+    }
+
+    .select__label.select-hide.visible {
+      visibility: visible;
+      opacity: 1;
+      transition: max-height 0.3s ease-in-out, visibility 0s linear,
+        opacity 0.3s linear;
+    }
+
+    select {
+      margin-top: 5px;
+      color: $text;
+      padding: 10px 10px 10px 5px;
+    }
+
+    .form-button {
+      font-size: 13px;
+      line-height: 15px;
+      border-color: transparent;
+      border-radius: 4px;
+      display: block;
+      max-width: 250px;
+      padding: 15px 25px;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: $bg;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+    .form-button.form-button--buy {
+      max-width: 300px;
+      width: 100%;
+    }
+    .form-button:hover {
+      background-color: $hover-accent;
+    }
+    .form-req {
+      color: $hover-accent;
+    }
+    .input {
+      margin-top: 5px;
+      padding: 10px 10px 10px 5px;
+      max-width: 210px;
+      display: block;
+      width: 100%;
+
+      margin-bottom: 15px;
+    }
   }
 }
+
 .text {
-  padding: 420px 220px 120px 20px;
+  padding: 40px 220px 120px 20px;
 }
 
 @import "media";

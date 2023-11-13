@@ -14,8 +14,29 @@
     width: 124px;
     height: 96px;
   }
+  .header-submenu__wrapper--contacts {
+    padding-top: 20px;
+    top: 50px;
+  }
+  .header-submenu__contacts {
+    .header-submenu__item + .header-submenu__item {
+      margin-left: 10px;
+    }
+  }
+  .header-submenu__link-image {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
   .hero-image {
-    height: 480px;
+    height: 500px;
+  }
+  .hero-content__btn {
+    max-width: 230px;
+    padding: 15px 25px;
+  }
+  .hero-content__tabs.tabs {
+    max-width: 450px;
   }
   // .hero-content {
   //   padding: 80px 60px;
@@ -23,5 +44,4 @@
   // .hero-content__title--decor {
   //   max-width: 170px;
   // }
- 
 }

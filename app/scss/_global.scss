@@ -1,40 +1,105 @@
 html,
 body {
-    height: 100%;
-    overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden;
 }
-body {    
-    font-size: 16px;
-    line-height: 24px;
-    color: #2d2d2d;
-    font-family: 'Roboto Slab', serif;
-    color: $text;
-   
+body {
+  font-size: 16px;
+  line-height: 24px;
+  color: #2d2d2d;
+  font-family: "Roboto Slab", serif;
+  color: $text;
 }
 a {
-    color: $text;
+  color: $text;
 }
 .wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .main {
-    flex-grow: 1;      
-    background-color: #fff;
+  flex-grow: 1;
+  background-color: #fff;
 }
 .container-fluid {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .invisible-title {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+// tabs in hero section
+.hero-content__tabs.tabs {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  .tabs__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  
+  .tabs__item:not(:last-child) {
+    margin-right: 25px;
+  }
+  
+  .tabs__btn {
+    padding: 6px 0px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    @extend %roboto-500;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-bottom: 3px solid transparent;
+    transition: all .3s;
+    
+  }
+  
+  .tabs__btn:hover {
+      border-bottom: 3px solid #fff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: all .3s;
+  }
+  
+  .tabs__btn--active {
+    border-bottom: 3px solid $hover-accent;
+    color: $hover-accent;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .tabs__content {
+    display: none;
+    background-color: rgba(108, 171, 204, 0.3);
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .tabs__content--active {
+    display: block;
+  }
+  
+  .tabs-content__box {
+    padding: 20px 30px;
+  }
+  
 }
 

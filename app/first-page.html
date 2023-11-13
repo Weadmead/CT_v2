@@ -535,28 +535,43 @@
                     <ul class="header-submenu header-submenu__contacts">
                       <li class="header-submenu__item">
                         <a class="header-submenu__link" href="#"
-                          ><img src="images/icons/gmail.png" alt=""
+                          ><img
+                            class="header-submenu__link-image"
+                            src="images/icons/gmail.png"
+                            alt="contacts email icon"
                         /></a>
                       </li>
                       <li class="header-submenu__item">
                         <a class="header-submenu__link" href="#"
-                          ><img src="images/icons/whatsapp.png" alt=""
+                          ><img
+                            class="header-submenu__link-image"
+                            src="images/icons/whatsapp.png"
+                            alt="contacts whatsapp icon"
                         /></a>
                       </li>
                       <li class="header-submenu__item">
                         <a class="header-submenu__link" href="#"
-                          ><img src="images/icons/telegram.png" alt=""
+                          ><img
+                            class="header-submenu__link-image"
+                            src="images/icons/telegram.png"
+                            alt="contacts telegram icon"
                         /></a>
                       </li>
                       <li class="header-submenu__item">
                         <a class="header-submenu__link" href="#"
-                          ><img src="images/icons/messenger.png" alt=""
+                          ><img
+                            class="header-submenu__link-image"
+                            src="images/icons/messenger.png"
+                            alt="contacts messenger icon"
                         /></a>
                       </li>
 
                       <li class="header-submenu__item">
                         <a class="header-submenu__link" href="#"
-                          ><img src="images/icons/telephone-call.png" alt=""
+                          ><img
+                            class="header-submenu__link-image"
+                            src="images/icons/telephone-call.png"
+                            alt="contacts phone icon"
                         /></a>
                       </li>
                     </ul>
@@ -576,7 +591,7 @@
               alt="Cozy house in a quiet and peaceful neighborhood"
             />
           </div>
-        
+
           <div class="hero-content">
             <div class="hero-content__title-box">
               <span class="hero-content__title-box--decor">Say</span>
@@ -585,9 +600,220 @@
                 <span>Y</span>our Dream Home In <br />
                 <span>C</span>algary!
               </h1>
+              <a class="hero-content__btn" href="#">Browse Your Home Now</a>
             </div>
-            <div class="hero-content__form">
 
+            <div class="hero-content__tabs tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item">
+                  <button
+                    class="tabs__btn tabs__btn--active"
+                    data-tabs-path="sell"
+                  >
+                    SELL
+                  </button>
+                </li>
+                <li class="tabs__item">
+                  <button class="tabs__btn" data-tabs-path="buy">Buy</button>
+                </li>
+              </ul>
+              <div
+                class="tabs__content tabs__content--active"
+                data-tabs-target="sell"
+              >
+                <div class="tabs-content__box">
+                  <form
+                    action="#"
+                    class="form hero-content__form"
+                    method="POST"
+                    enctype="multipart/form-data"
+                  >
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="newTC" />
+                    <input
+                      type="hidden"
+                      name="admin_email"
+                      value="wead758@gmail.com "
+                    />
+                    <input
+                      type="hidden"
+                      name="form_subject"
+                      value="FROM: Main page / SELL MY HOME FORM"
+                    />
+                    <!-- END Hidden Required Fields -->
+
+                    <label class="form__label">
+                      Name: <span class="form-req">*</span>
+                      <input
+                        class="input input-name"
+                        type="text"
+                        data-validate-field="name"
+                        name="Name"
+                        placeholder="First name"
+                      />
+                    </label>
+                    <label class="form__label">
+                      Email: <span class="form-req">*</span>
+                      <input
+                        class="input input-mail"
+                        type="email"
+                        data-validate-field="email"
+                        name="Email"
+                        placeholder="Your email"
+                      />
+                    </label>
+                    <label class="form__label">
+                      Phone: <span class="form-req">*</span>
+                      <input
+                        class="input input-tel"
+                        type="tel"
+                        data-validate-field="tel"
+                        name="Phone"
+                        placeholder="Your phone"
+                      />
+                    </label>
+                    <label class="form__label">
+                      Address <span class="form-req">*</span>
+                      <input
+                        class="input input-name"
+                        type="text"
+                        data-validate-field="name"
+                        name="Name"
+                        placeholder="Your Address"
+                      />
+                    </label>
+                    <label class="form__label select__label">
+                      Preferred method of contact:
+                      <select
+                        name="form__contact-method"
+                        id="form__contact-method-sell"
+                      >
+                        <option value="email">Contact me by Email</option>
+                        <option value="phone">Contact me by Phone</option>
+                      </select>
+                    </label>
+
+                    <label
+                      class="form__label select__label select-hide"
+                      id="timeSelectLabel1"
+                      data-select-id="timeSelectLabel1"
+                    >
+                      Preferred time for call:
+                      <select
+                        name="form__contact-time"
+                        class="form__contact-time"
+                      >
+                        <option value="9-11">9 a.m - 11 a.m.</option>
+                        <option value="11-1">11 a.m - 1 p.m.</option>
+                        <option value="1-3">1 p.m - 3 p.m.</option>
+                        <option value="3-5">3 p.m. - 5 p.m..</option>
+                        <option value="5-7">5 p.m.- 7 p.m.</option>
+                      </select>
+                    </label>
+
+                    <button class="form-button btn">Sell my home!</button>
+                  </form>
+                </div>
+              </div>
+              <div class="tabs__content" data-tabs-target="buy">
+                <div class="tabs-content__box">
+                  <form
+                    action="#"
+                    class="form hero-content__form"
+                    method="POST"
+                    enctype="multipart/form-data"
+                  >
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="newTC" />
+                    <input
+                      type="hidden"
+                      name="admin_email"
+                      value="wead758@gmail.com "
+                    />
+                    <input
+                      type="hidden"
+                      name="form_subject"
+                      value="FROM: Main page / Request a buyers consultation"
+                    />
+                    <!-- END Hidden Required Fields -->
+
+                    <label class="form__label">
+                      Name: <span class="form-req">*</span>
+                      <input
+                        class="input input-name"
+                        type="text"
+                        data-validate-field="name"
+                        name="Name"
+                        placeholder="First name"
+                      />
+                    </label>
+                    <label class="form__label">
+                      Email: <span class="form-req">*</span>
+                      <input
+                        class="input input-mail"
+                        type="email"
+                        data-validate-field="email"
+                        name="Email"
+                        placeholder="Your email"
+                      />
+                    </label>
+                    <label class="form__label">
+                      Phone: <span class="form-req">*</span>
+                      <input
+                        class="input input-tel"
+                        type="tel"
+                        data-validate-field="tel"
+                        name="Phone"
+                        placeholder="Your phone"
+                      />
+                    </label>
+                    <label class="form__label">
+                      Type of Home: (optional)
+                      <input
+                        class="input input-name"
+                        type="text"
+                        data-validate-field="name"
+                        name="Name"
+                        placeholder=""
+                      />
+                    </label>
+                  
+
+                    <label class="form__label select__label">
+                      Preferred method of contact:
+                      <select
+                        name="form__contact-method"
+                        id="form__contact-method-buy"
+                      >
+                        <option value="email">Contact me by Email</option>
+                        <option value="phone">Contact me by Phone</option>
+                      </select>
+                    </label>
+
+                    <label
+                      class="form__label select__label select-hide"
+                      id="timeSelectLabel2"
+                      data-select-id="timeSelectLabel2"
+                    >
+                      Preferred time for call:
+                      <select
+                        name="form__contact-time"
+                        class="form__contact-time"
+                      >
+                        <option value="9-11">9 a.m - 11 a.m.</option>
+                        <option value="11-1">11 a.m - 1 p.m.</option>
+                        <option value="1-3">1 p.m - 3 p.m.</option>
+                        <option value="3-5">3 p.m. - 5 p.m..</option>
+                        <option value="5-7">5 p.m.- 7 p.m.</option>
+                      </select>
+                    </label>
+
+                    <button class="form-button form-button--buy btn ">
+                      Request a Buyer's Consultation
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </section>
