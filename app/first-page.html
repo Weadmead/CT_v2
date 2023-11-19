@@ -682,21 +682,35 @@
                         placeholder="Your Address"
                       />
                     </label>
-                    <label class="form__label select__label">
+                    <div class="form__box">
                       Preferred method of contact:
-                      <select
-                        name="form__contact-method"
-                        id="form__contact-method-sell"
-                      >
-                        <option value="email">Contact me by Email</option>
-                        <option value="phone">Contact me by Phone</option>
-                      </select>
-                    </label>
+                      <div class="form-radio__box">
+                        <label class="form__label contact__label phone-label">
+                          <span id="phoneSpan">Contact me by Phone</span>
+                          <input
+                            class="input input-radio"
+                            type="radio"
+                            name="contactMethod"
+                            value="phone"
+                            
+                          />
+                        </label>
+                        <label class="form__label contact__label">
+                          <span id="emailSpan" class="active" >Contact me by Email:</span>
+                          <input
+                            class="input input-radio"
+                            type="radio"
+                            name="contactMethod"
+                            value="email"
+                          />
+                        </label>
+                      </div>
+                    </div>
 
                     <label
                       class="form__label select__label select-hide"
-                      id="timeSelectLabel1"
-                      data-select-id="timeSelectLabel1"
+                      id="timeSelectLabel"
+                      data-select-id="timeSelectLabel"
                     >
                       Preferred time for call:
                       <select
@@ -777,18 +791,30 @@
                         placeholder=""
                       />
                     </label>
-                  
-
-                    <label class="form__label select__label">
+                    <div class="form__box">
                       Preferred method of contact:
-                      <select
-                        name="form__contact-method"
-                        id="form__contact-method-buy"
-                      >
-                        <option value="email">Contact me by Email</option>
-                        <option value="phone">Contact me by Phone</option>
-                      </select>
-                    </label>
+                      <div class="form-radio__box">
+                        <label class="form__label contact__label phone-label">
+                          <span id="phoneSpan-buy">Contact me by Phone</span>
+                          <input
+                            class="input input-radio"
+                            type="radio"
+                            name="contactMethod2"
+                            value="phone2"
+                            
+                          />
+                        </label>
+                        <label class="form__label contact__label">
+                          <span id="emailSpan-buy" class="active" >Contact me by Email:</span>
+                          <input
+                            class="input input-radio"
+                            type="radio"
+                            name="contactMethod2"
+                            value="email2"
+                          />
+                        </label>
+                      </div>
+                    </div>
 
                     <label
                       class="form__label select__label select-hide"
@@ -808,7 +834,7 @@
                       </select>
                     </label>
 
-                    <button class="form-button form-button--buy btn ">
+                    <button class="form-button form-button--buy btn">
                       Request a Buyer's Consultation
                     </button>
                   </form>

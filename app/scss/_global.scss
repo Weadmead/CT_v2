@@ -50,11 +50,11 @@ a {
     justify-content: flex-start;
     align-items: start;
   }
-  
+
   .tabs__item:not(:last-child) {
     margin-right: 25px;
   }
-  
+
   .tabs__btn {
     padding: 6px 0px;
     margin-bottom: 15px;
@@ -69,37 +69,35 @@ a {
     text-transform: uppercase;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     border-bottom: 3px solid transparent;
-    transition: all .3s;
-    
+    transition: all 0.3s;
   }
-  
+
   .tabs__btn:hover {
-      border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #fff;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    transition: all .3s;
+    transition: all 0.3s;
   }
-  
+
   .tabs__btn--active {
     border-bottom: 3px solid $hover-accent;
     color: $hover-accent;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     pointer-events: none;
   }
-  
+
   .tabs__content {
     display: none;
     background-color: rgba(108, 171, 204, 0.3);
     border-radius: 4px;
     color: #fff;
   }
-  
+
   .tabs__content--active {
     display: block;
   }
-  
+
   .tabs-content__box {
     padding: 20px 30px;
   }
-  
 }
 

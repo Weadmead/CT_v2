@@ -28,43 +28,45 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 });
 
-
-// select hide 
-
-document.addEventListener('DOMContentLoaded', function () {
-  var contactMethodSelectSell = document.getElementById('form__contact-method-sell');
-  var timeSelectLabel1 = document.getElementById('timeSelectLabel1');
-
-  var contactMethodSelectBuy = document.getElementById('form__contact-method-buy');
-  var timeSelectLabel2 = document.getElementById('timeSelectLabel2');
-
-  function hideAllTimeSelects() {
-    timeSelectLabel1.classList.add('select-hide');
-    timeSelectLabel2.classList.add('select-hide');
+// select hide sell/buy form MAIN PAGE
+document.addEventListener("DOMContentLoaded", function () {
+  function handleRadioChange(radio, timeSelectLabel, activeSpan, inactiveSpan) {
+    if (radio.checked) {
+      timeSelectLabel.classList.toggle("select-hide", !radio.value.includes("phone"));
+      activeSpan.classList.add("active");
+      inactiveSpan.classList.remove("active");
+    }
   }
 
-  hideAllTimeSelects();
+  const contactByPhoneRadio = document.querySelector('input[value="phone"]');
+  const contactByPhoneRadio2 = document.querySelector('input[value="phone2"]');
+  const contactByEmailRadio = document.querySelector('input[value="email"]');
+  const contactByEmailRadio2 = document.querySelector('input[value="email2"]');
+  const timeSelectLabel = document.querySelector(".select__label");
+  const contactByPhoneSpan = document.getElementById("phoneSpan");
+  const contactByEmailSpan = document.getElementById("emailSpan");
+  const contactByPhoneSpanBuy = document.getElementById("phoneSpan-buy");
+  const contactByEmailSpanBuy = document.getElementById("emailSpan-buy");
 
-  contactMethodSelectSell.addEventListener('change', function () {
-    var selectedValue = contactMethodSelectSell.value;
-
-    hideAllTimeSelects();
-
-    if (selectedValue === 'phone') {
-      timeSelectLabel1.classList.remove('select-hide');
-    }
+  contactByPhoneRadio.addEventListener("change", function () {
+    handleRadioChange(contactByPhoneRadio, timeSelectLabel, contactByPhoneSpan, contactByEmailSpan);
   });
 
-  contactMethodSelectBuy.addEventListener('change', function () {
-    var selectedValue = contactMethodSelectBuy.value;
+  contactByEmailRadio.addEventListener("change", function () {
+    handleRadioChange(contactByEmailRadio, timeSelectLabel, contactByEmailSpan, contactByPhoneSpan);
+  });
 
-    hideAllTimeSelects();
+  contactByPhoneRadio2.addEventListener("change", function () {
+    handleRadioChange(contactByPhoneRadio2, timeSelectLabel2, contactByPhoneSpanBuy, contactByEmailSpanBuy);
+  });
 
-    if (selectedValue === 'phone') {
-      timeSelectLabel2.classList.remove('select-hide');
-    }
+  contactByEmailRadio2.addEventListener("change", function () {
+    handleRadioChange(contactByEmailRadio2, timeSelectLabel2, contactByEmailSpanBuy, contactByPhoneSpanBuy);
   });
 });
+
+
+
 
 $(function () {
   // Header menus and submenus
