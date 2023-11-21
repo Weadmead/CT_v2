@@ -38,6 +38,27 @@
   .hero-content__tabs.tabs {
     max-width: 450px;
   }
+  .hero-content__form {
+    .form-contact__span {
+      padding: 12px 30px !important; 
+    }
+  }
+  .services-describe {
+    max-width: 720px;
+  }
+  .services-list__item-link {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .services {
+    .slick-arrow {
+      bottom: -4px;
+    }
+  }
+  .about-aside__social-img {
+    width: 28px;
+    height: 28px;
+  }
   // .hero-content {
   //   padding: 80px 60px;
   // }

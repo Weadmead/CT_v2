@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
   function handleRadioChange(radio, timeSelectLabel, activeSpan, inactiveSpan) {
     if (radio.checked) {
-      timeSelectLabel.classList.toggle("select-hide", !radio.value.includes("phone"));
+      timeSelectLabel.classList.toggle(
+        "select-hide",
+        !radio.value.includes("phone")
+      );
       activeSpan.classList.add("active");
       inactiveSpan.classList.remove("active");
     }
@@ -49,24 +52,41 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactByEmailSpanBuy = document.getElementById("emailSpan-buy");
 
   contactByPhoneRadio.addEventListener("change", function () {
-    handleRadioChange(contactByPhoneRadio, timeSelectLabel, contactByPhoneSpan, contactByEmailSpan);
+    handleRadioChange(
+      contactByPhoneRadio,
+      timeSelectLabel,
+      contactByPhoneSpan,
+      contactByEmailSpan
+    );
   });
 
   contactByEmailRadio.addEventListener("change", function () {
-    handleRadioChange(contactByEmailRadio, timeSelectLabel, contactByEmailSpan, contactByPhoneSpan);
+    handleRadioChange(
+      contactByEmailRadio,
+      timeSelectLabel,
+      contactByEmailSpan,
+      contactByPhoneSpan
+    );
   });
 
   contactByPhoneRadio2.addEventListener("change", function () {
-    handleRadioChange(contactByPhoneRadio2, timeSelectLabel2, contactByPhoneSpanBuy, contactByEmailSpanBuy);
+    handleRadioChange(
+      contactByPhoneRadio2,
+      timeSelectLabel2,
+      contactByPhoneSpanBuy,
+      contactByEmailSpanBuy
+    );
   });
 
   contactByEmailRadio2.addEventListener("change", function () {
-    handleRadioChange(contactByEmailRadio2, timeSelectLabel2, contactByEmailSpanBuy, contactByPhoneSpanBuy);
+    handleRadioChange(
+      contactByEmailRadio2,
+      timeSelectLabel2,
+      contactByEmailSpanBuy,
+      contactByPhoneSpanBuy
+    );
   });
 });
-
-
-
 
 $(function () {
   // Header menus and submenus
@@ -99,4 +119,62 @@ $(function () {
   window.onscroll = function () {
     myFunction();
   };
+});
+
+
+//slider
+
+$(document).ready(function () {
+  $(".services-list").slick({
+    centerMode: true,
+    centerPadding: "80px",
+    slidesToShow: 4,
+    slideToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    horizontal: true,
+    horizontalSwiping: true,
+    touchThreshold: true,
+    // arrows: false,
+    prevArrow:
+      '<button type="button" class="slick-prev"> <img src="images/icons/arrow-left2.svg" alt=""> </button>',
+    nextArrow:
+      '<button type="button" class="slick-next"><img src="images/icons/arrow-right2.svg" alt=""></button>',
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  $(".services-list").on("wheel", function (e) {
+    e.preventDefault();
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick("slickNext");
+    } else {
+      $(this).slick("slickPrev");
+    }
+  });
+});
+
+
+$(".btn-toggle").click(function () {
+  $(".about-content__text.hidden").toggleClass("hidden");
+  $(this).addClass("btn-hidden")
 });
