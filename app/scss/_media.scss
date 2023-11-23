@@ -1,7 +1,7 @@
 @media (max-width: 1560px) {
   body {
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 18px;
   }
   .header-decor {
     font-size: 15px;
@@ -39,10 +39,12 @@
     max-width: 450px;
   }
   .hero-content__form {
-    .form-contact__span {
-      padding: 12px 30px !important; 
+    .input {
+      max-width: 190px;
+      width: 100%;
     }
   }
+
   .services-describe {
     max-width: 720px;
   }
@@ -59,6 +61,27 @@
     width: 28px;
     height: 28px;
   }
+  .popup-appointment {
+    padding-top: 120px;
+    .close-btn {
+      top: 85px;
+      right: 20px;
+    }
+  }
+  .contact{
+    height: 200px;
+    &:after {
+  
+      top: -20px;
+    
+      height: 220px;
+    }
+    .form-button {
+      padding: 12px 35px;
+    }
+  }
+ 
+
   // .hero-content {
   //   padding: 80px 60px;
   // }

@@ -88,9 +88,72 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-$(function () {
-  // Header menus and submenus
+$(document).ready(function () {
+  // Your existing code...
 
+  // Function to close pop-ups
+  function closePopups() {
+    $(".about-content__popup").addClass("about-content__popup-hidden");
+  }
+
+  // Event listener for clicks outside the pop-up
+  $(document).on("click", function (e) {
+    // Check if the clicked element is not inside the pop-up
+    if (
+      !$(e.target).closest(".about-content__popup, .about-content__btns").length
+    ) {
+      closePopups();
+    }
+  });
+});
+
+$(function () {
+
+  // Pop-ups
+  // Function to close pop-ups
+  function closePopups() {
+    $(".popup").addClass("popup-hidden");
+    $(".popup-appointment").addClass("popup-hidden");
+    $(".popup-formbox").addClass("popup-hidden");
+  }
+
+  $(".appointment-btn").click(function () {
+    closePopups();
+    $(".popup").removeClass("popup-hidden");
+    $(".popup-appointment").removeClass("popup-hidden");
+  });
+
+  $(".question-btn").click(function () {
+    closePopups();
+    $(".popup").removeClass("popup-hidden");
+    $(".popup-formbox").removeClass("popup-hidden");
+  });
+
+  $(".popup-title").click(function () {
+    closePopups();
+  });
+
+  $(".close-btn").click(function () {
+    closePopups();
+  });
+
+  $(document).keydown(function (e) {
+    if (e.key === "Escape") {
+      closePopups();
+    }
+  });
+
+  $(document).on("click", function (e) {
+    if (
+      !$(e.target).closest(
+        ".popup, .btns, .appointment-btn, .question-btn"
+      ).length
+    ) {
+      closePopups();
+    }
+  });
+
+  // Header menus and submenus
   $(".header-menu__item").on("click", function () {
     const $submenuWrapper = $(this).find(".header-submenu__wrapper");
 
@@ -119,12 +182,8 @@ $(function () {
   window.onscroll = function () {
     myFunction();
   };
-});
 
-
-//slider
-
-$(document).ready(function () {
+  //slider
   $(".services-list").slick({
     centerMode: true,
     centerPadding: "80px",
@@ -135,8 +194,7 @@ $(document).ready(function () {
     autoplaySpeed: 3000,
     horizontal: true,
     horizontalSwiping: true,
-    touchThreshold: true,
-    // arrows: false,
+    touchThreshold: true,    
     prevArrow:
       '<button type="button" class="slick-prev"> <img src="images/icons/arrow-left2.svg" alt=""> </button>',
     nextArrow:
@@ -171,10 +229,16 @@ $(document).ready(function () {
       $(this).slick("slickPrev");
     }
   });
-});
+
+  // section about btn
+  $(".btn-toggle").click(function () {
+    $(".about-content__text.hidden").toggleClass("hidden");
+    $(this).addClass("btn-hidden");
+  });
 
 
-$(".btn-toggle").click(function () {
-  $(".about-content__text.hidden").toggleClass("hidden");
-  $(this).addClass("btn-hidden")
+  $('.buying-guide__item-name').click(function () {
+    let item = $(this).closest('.buying-guide__item');
+    item.toggleClass('open');
+  });
 });
