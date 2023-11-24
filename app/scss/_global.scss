@@ -30,7 +30,7 @@ a {
   position: absolute;
   bottom: 0px;
   width: 1200px;
-  height: 300px;  
+  height: 300px;
   img {
     width: 100%;
     object-fit: cover;
@@ -162,11 +162,14 @@ button,
 .textarea {
   resize: none;
   padding: 15px;
+  width: 100%;
+  max-width: 800px;
 }
 .textarea,
 .input {
   margin-top: 5px;
   border-radius: 4px;
+  border: 1px solid $bg;
 }
 .btn:hover {
   background-color: $hover-accent;
@@ -281,7 +284,15 @@ button,
 }
 
 //Page aside
-
+.page-inner {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.page-content {
+  max-width: 780px;
+  width: 100%;
+}
 .page-aside {
   // border: 1px solid $bg;
   // border-radius: 8px;
@@ -289,6 +300,15 @@ button,
   max-width: 320px;
   width: 100%;
   margin-left: 30px;
+}
+.page-title {
+  font-size: 28px;
+  line-height: 36px;
+  border-bottom: 3px solid #0c5484;
+  color: #0c5484;
+
+  margin-bottom: 25px;
+  padding-bottom: 5px;
 }
 .page-aside__menu {
   border: 1px solid $bg;
@@ -357,9 +377,10 @@ button,
   margin-left: 10px;
 }
 .page-aside__social-img {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   transition: all 0.3s;
+  margin: 5px 0;
 }
 .page-aside__social-img:hover {
   transform: scale(1.12);
@@ -412,7 +433,7 @@ button,
   text-transform: initial;
 }
 .page-aside__btn:hover {
-background-color: $hover-accent;
+  background-color: $hover-accent;
 }
 .page-aside__btn + .buying-guide__btn {
   margin-left: 5px;
