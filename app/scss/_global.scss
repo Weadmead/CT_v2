@@ -29,6 +29,8 @@ a {
   background-size: cover;
   position: absolute;
   bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0px);
   width: 1200px;
   height: 300px;
   img {
@@ -71,6 +73,11 @@ a {
 button,
 .input {
   outline-color: $bg;
+ 
+}
+.input,
+.textarea {
+  font-weight: 400;
 }
 .form-req {
   color: $hover-accent;
@@ -155,6 +162,8 @@ button,
     padding: 20px 30px;
   }
 }
+
+
 .form__label {
   color: #232323;
   @extend %roboto-500;
@@ -238,9 +247,11 @@ button,
     outline-color: $bg;
     margin-top: 5px;
     border: 1px solid $text;
+   
   }
   .input {
     padding: 10px 15px;
+    
   }
   .textarea {
     margin-top: 10px;
