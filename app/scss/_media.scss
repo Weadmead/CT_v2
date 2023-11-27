@@ -18,10 +18,7 @@
     width: 124px;
     height: 96px;
   }
-  .header-submenu__wrapper--contacts {
-    padding-top: 20px;
-    top: 50px;
-  }
+
   .header-submenu__contacts {
     .header-submenu__item + .header-submenu__item {
       margin-left: 10px;
@@ -53,7 +50,9 @@
       width: 100%;
     }
   }
-
+  .page-aside__menu {
+    top: 120px;
+  }
   .services-describe {
     max-width: 720px;
   }

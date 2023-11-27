@@ -73,7 +73,6 @@ a {
 button,
 .input {
   outline-color: $bg;
- 
 }
 .input,
 .textarea {
@@ -163,7 +162,6 @@ button,
   }
 }
 
-
 .form__label {
   color: #232323;
   @extend %roboto-500;
@@ -247,11 +245,9 @@ button,
     outline-color: $bg;
     margin-top: 5px;
     border: 1px solid $text;
-   
   }
   .input {
     padding: 10px 15px;
-    
   }
   .textarea {
     margin-top: 10px;
@@ -321,12 +317,16 @@ button,
   margin-bottom: 25px;
   padding-bottom: 5px;
 }
+
 .page-aside__menu {
   border: 1px solid $bg;
   border-radius: 8px;
   padding: 20px 20px;
   margin-bottom: 20px;
+  position: sticky;
+  top: 160px;
 }
+
 .page-aside__menu-title {
   font-size: 18px;
   line-height: 22px;

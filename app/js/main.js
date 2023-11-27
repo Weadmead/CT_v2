@@ -236,9 +236,19 @@ $(function () {
     $(this).addClass("btn-hidden");
   });
 
+//buying  selling guide pages
 
   $('.buying-guide__item-name').click(function () {
     let item = $(this).closest('.buying-guide__item');
     item.toggleClass('open');
   });
+
+  $('.selling-guide__item-name').click(function () {
+    let item = $(this).closest('.selling-guide__item');
+    item.toggleClass('open');
+  });
+
+
+
 });
+
