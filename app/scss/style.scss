@@ -122,7 +122,6 @@
     transform: scale(1.2);
   }
 
- 
   &-submenu__content {
     display: flex;
     .submenu-box {
@@ -855,6 +854,8 @@
     padding: 15px 20px 15px 50px;
     border: 1px solid $bg;
     // border-radius: 4px;
+    border-top: 5px solid $hover-accent;
+
     cursor: pointer;
     width: 100%;
     font-size: 20px;
@@ -868,6 +869,7 @@
   &__item-name:hover {
     background-color: $hover-accent;
     border: 1px solid $hover-accent;
+    border-top: 5px solid $hover-accent;
   }
   &__item-name::after {
     content: "";
@@ -1066,7 +1068,8 @@
 
 //pages tips+marketing
 .tips,
-.marketing {
+.marketing,
+.communites {
   &__content-title {
     max-width: 540px;
     width: 100%;
@@ -1080,26 +1083,31 @@
     font-weight: 400 !important;
     text-transform: initial;
   }
-  &__content-item {
-    margin-bottom: 40px;
+  &__content-list {
+    margin-bottom: 35px;
   }
+  &__content-item {
+    margin-bottom: 25px;
+  }
+
   &__content-name {
     font-size: 20px;
     line-height: 24px;
     padding-bottom: 10px;
 
     margin-bottom: 15px;
-    border-bottom: 1px solid $text;
+    border-bottom: 1px solid $bg;
   }
+
   &__content-text {
     padding-left: 10px;
   }
 }
+
 .marketing__content-title {
   max-width: 210px;
   width: 100%;
 }
-
 
 //selling pages
 .selling-consultation {
@@ -1122,7 +1130,89 @@
   }
   .selling-consultation__title {
     max-width: 210px;
-   }
+  }
+}
+
+//communites pages
+.communites {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content-title {
+    font-size: 28px;
+    line-height: 36px;  
+    margin-bottom: 15px;
+    border:none;
+
+    text-decoration: underline 5px $hover-accent;
+    text-decoration-skip-ink: none;
+    display: inline; 
+
+    
+  }
+ 
+
+  &__content-description {
+    margin-bottom: 20px;
+    
+  }
+  &__content-list {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  &__content-item {
+    position: relative;
+    margin-bottom: 15px;
+    transition: all 0.4s;
+    box-shadow: 2px 3px 4px 0px rgba(108, 171, 204, 0.35);
+
+    text-align-last: left;
+  }
+  // &__content-list {
+  //   width: 100%;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  //   margin-bottom: 0;
+  //   display: flex;
+  // }
+  // &__content-item {
+  //   width: 250px !important;
+  //   height: 200px !important;
+  //   position: relative;
+  //   margin-bottom: 15px;
+  //   transition: all 0.4s;
+  //   box-shadow: 2px 3px 4px 0px rgba(108, 171, 204, 0.35);
+  //   border: 1px solid $hover-accent;
+  //   display: flex;
+  //   flex-direction: column;
+
+  // }
+  // .communites__content-item + .communites__content-item {
+  //   margin-right: 15px;
+  // }
+  &__content-name {
+    background-color: $bg;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px 20px;
+    color: #fff;
+    border-top: 5px solid $hover-accent;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &__content-text {
+    padding: 10px 15px;
+    border: 1px solid $hover-accent;
+  }
+  &__content-btn {
+    text-align: center;
+    text-transform: initial;
+    font-size: 14px;
+    @extend %roboto-500;
+    margin: 0 auto;
+  }
 }
 
 @import "media";

@@ -230,6 +230,30 @@ $(function () {
     }
   });
 
+  // $(".communites__content-list").slick({
+  //   slidesToShow: 2,
+  //   slideToScroll: 2,
+  //   infinite: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 3000,
+  //   horizontal: true,
+  //   horizontalSwiping: true,
+  //   touchThreshold: true,    
+  //   prevArrow:
+  //     '<button type="button" class="slick-prev"> <img src="images/icons/arrow-left2.svg" alt=""> </button>',
+  //   nextArrow:
+  //     '<button type="button" class="slick-next"><img src="images/icons/arrow-right2.svg" alt=""></button>',   
+   
+  // });
+  // $(".communites__content-list").on("wheel", function (e) {
+  //   e.preventDefault();
+  //   if (e.originalEvent.deltaY < 0) {
+  //     $(this).slick("slickNext");
+  //   } else {
+  //     $(this).slick("slickPrev");
+  //   }
+  // });
+
   // section about btn
   $(".btn-toggle").click(function () {
     $(".about-content__text.hidden").toggleClass("hidden");
