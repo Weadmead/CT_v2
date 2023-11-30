@@ -88,27 +88,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-$(document).ready(function () {
-  // Your existing code...
+// $(document).ready(function () {
+//   // Your existing code...
 
-  // Function to close pop-ups
-  function closePopups() {
-    $(".about-content__popup").addClass("about-content__popup-hidden");
-  }
+//   // Function to close pop-ups
+//   function closePopups() {
+//     $(".about-content__popup").addClass("about-content__popup-hidden");
+//   }
 
-  // Event listener for clicks outside the pop-up
-  $(document).on("click", function (e) {
-    // Check if the clicked element is not inside the pop-up
-    if (
-      !$(e.target).closest(".about-content__popup, .about-content__btns").length
-    ) {
-      closePopups();
-    }
-  });
-});
+//   // Event listener for clicks outside the pop-up
+//   $(document).on("click", function (e) {
+//     // Check if the clicked element is not inside the pop-up
+//     if (
+//       !$(e.target).closest(".about-content__popup, .about-content__btns").length
+//     ) {
+//       closePopups();
+//     }
+//   });
+// });
 
 $(function () {
-
+ 
   // Pop-ups
   // Function to close pop-ups
   function closePopups() {

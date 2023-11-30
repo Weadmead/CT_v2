@@ -343,8 +343,7 @@ button,
 .page-aside__menu-list--community {
   margin-bottom: 10px;
   color: $bg;
- width: 250px;
- 
+  width: 250px;
 }
 
 .page-aside__menu-item {
@@ -460,4 +459,64 @@ button,
 }
 .page-aside__btn + .buying-guide__btn {
   margin-left: 5px;
+}
+
+//privacy-policy page
+
+.pp {
+  &__inner {
+    padding: 40px 0;
+    color: $text;
+  }
+  &-item {
+    margin-bottom: 25px;
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 60px;
+    color: $bg;
+    margin-bottom: 15px;
+    padding: 5px;
+    // text-decoration: underline $text;
+    // text-decoration-skip-ink: none;
+  }
+  &-item__title {
+    font-size: 32px;
+    line-height: 48px;
+    border-bottom: 1px solid $text;
+    padding: 5px;
+  }
+  &-item__subtitle {
+    margin: 10px 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  &-item__text,
+  &-item__list-line {
+    margin: 15px 0;
+  }
+
+  ul {
+    padding-left: 40px;
+    list-style-type: disc;
+  }
+  a {
+    color: $bg;
+    cursor: pointer;
+    &:hover {
+      color: $hover-accent;
+    }
+  }
+}
+
+.contacts {
+  &-page__list.header-submenu__contacts {
+    margin: 20px 0;
+  }
+  &-title {
+    text-align: center;
+    width: 152px;
+    margin: 0 auto;
+  }
+
 }
