@@ -190,8 +190,8 @@ $(function () {
     slidesToShow: 4,
     slideToScroll: 1,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     horizontal: true,
     horizontalSwiping: true,
     touchThreshold: true,    
@@ -259,7 +259,12 @@ $(function () {
     $(".about-content__text.hidden").toggleClass("hidden");
     $(this).addClass("btn-hidden");
   });
-
+  
+  $(".hero-content__btn--consultation").click(function () {
+    $(".hero-content__title-box").toggleClass("hidden");
+    $(".hero-content__tabs").toggleClass("visible");
+    $(this).addClass("btn-hidden");
+  });
 //buying  selling guide pages
 
   $('.buying-guide__item-name').click(function () {
