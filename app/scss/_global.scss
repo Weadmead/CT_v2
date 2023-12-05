@@ -21,6 +21,7 @@ a {
 .decor {
   padding: 150px 0;
 }
+
 .decor-box::after {
   content: "";
   background-image: url(../images/calgary-decor3.png);

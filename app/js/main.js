@@ -190,11 +190,11 @@ $(function () {
     slidesToShow: 4,
     slideToScroll: 1,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     horizontal: true,
     horizontalSwiping: true,
-    touchThreshold: true,    
+    // touchThreshold: true,    
     prevArrow:
       '<button type="button" class="slick-prev"> <img src="images/icons/arrow-left2.svg" alt=""> </button>',
     nextArrow:
@@ -202,21 +202,33 @@ $(function () {
     dots: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1050,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 3,
+      
+          slidesToShow: 2,
+          slideToScroll: 1,
+          infinite: true,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 880,
         settings: {
+          slidesToShow: 2,
+          slideToScroll: 1,
+          infinite: true,
+          // dots: false,
+          dots: true,
           arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
+        },
+      },
+      {
+        breakpoint: 590,
+        settings: {
           slidesToShow: 1,
+          slideToScroll: 1,
+          infinite: true,
+          // dots: false,
+          arrows: false,
         },
       },
     ],
